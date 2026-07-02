@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Management System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-users"></i>
+                <h1>User Management System</h1>
+            </div>
+            <div class="total-users">
+                <i class="fa-solid fa-user-group"></i>
+                <div>
+                    <p>Total Users</p>
+                    <h2 id="totalUsers">0</h2>
+                </div>
+            </div>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchUser" placeholder="Search user by name, email or role...">
+            </div>
+            <button id="sortBtn">
+                <i class="fa-solid fa-arrow-down-a-z"></i>
+                <p>Sort A-Z</p>
+            </button>
+        </section>
+
+        <section class="form-section">
+            <h2><i class="fa-solid fa-user-plus"></i>Add New User</h2>
+
+            <form id="userForm">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter full name" >
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter email" >
+                </div>
+
+                <div class="input-box">
+                    <label>Age</label>
+                    <input type="number" id="age" placeholder="Enter age">
+                </div>
+
+                <div class="input-box">
+                    <label>Role</label>
+                    <select id="role" >
+                        <option value="">Select Role</option>
+                        <option value="student">Student</option>
+                        <option value="dev">Developer</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <button class="addBtn saveBtn">
+                    <i class="fa-solid fa-plus"></i><p>Add User</p>
+                </button>
+            </form>
+        </section>
+
+        <section class="users-section">
+            <h2><i class="fa-solid fa-user-group"></i>All Users</h2>
+
+            <div id="usersContainer">
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
